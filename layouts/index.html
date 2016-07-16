@@ -21,19 +21,21 @@
   <div class="row-fluid">
     <div class="span12">
 
-      <div class="posts">
+      <div class="posts h-feed">
+        <h1 class="p-name">{{ .Site.Params.name }}</h1>
+        <p class="p-summary" >{{ .Site.Params.description }}</p>
         {{ range .Data.Pages }}        
-            <article class="post">
+            <article class="post h-entry">
             
               <header class="post-header">
-                <h1><a href="{{.RelPermalink }}">{{ .Title }}</a></h1>
-                <div class="post-time">{{ .Date.Format "January 2 2006" }}, {{ .FuzzyWordCount }} Words</div>
+                <h2><a class="p-name u-url" href="{{.RelPermalink }}">{{ .Title }}</a></h1>
+                <div class="post-time"><time class="dt-published" datetime="{{ $.Date }}">{{ .Date.Format "January 2 2006" }}</time>, {{ .FuzzyWordCount }} Words</div>
               </header>
 
               <div class="post-after">
                   <div class="tags">
                     {{ range .Params.tags }}
-                        <a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a>              
+                        <a rel="tag" class="p-category" href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a>              
                     {{ end }}
                   </div>
               </div>

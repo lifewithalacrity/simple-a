@@ -10,4 +10,4 @@ features = ["blog", ]
 [author]
     name = "AlexFinn"
     homepage = "http://ru.alexfinn.eu/"
-    source_repo = "https://github.com/AlexFinn/simple-a"
+    source_repo = "https://github.com/lifewithalacrity/simple-a"

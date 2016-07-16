@@ -1,7 +1,8 @@
     <meta charset="utf-8">
-    <title>ALEXFINN</title>
+    <title>{{ .Site.Params.name }}</title>
     
-    <meta name="author" content="Alexander 'alexfinn' Ivanov">
+    <meta name="author" content="{{ .Site.Params.author }}">
+    <meta name="description" content="{{ .Site.Params.description }}">
 
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
