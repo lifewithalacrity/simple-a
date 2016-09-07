@@ -35,7 +35,7 @@
               <div class="post-after">
                   <div class="tags">
                     {{ range .Params.tags }}
-                        <a rel="tag" class="p-category" href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a>              
+                        <a rel="tag" class="p-category" href="{{ $baseurl }}/tags/{{ replace . "#" "%23" | urlize }}">{{ . }}</a>              
                     {{ end }}
                   </div>
               </div>
